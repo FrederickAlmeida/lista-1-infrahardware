@@ -6,5 +6,5 @@ Grupo:
 - Caio Possidio
 - Felipe Neiva
 - Frederick Almeida
-- Ian Gabriel Braga Trinta Neiva Lima
+- Ian Gabriel
 - Rubens Lima
