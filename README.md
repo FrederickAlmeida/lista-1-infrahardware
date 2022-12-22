@@ -2,6 +2,8 @@
 
 Primeira lista da cadeira Infraestrutura de Hardware (IF674)
 
+Questões disponíveis no arquivo pdf.
+
 Grupo 4:
 - Caio Possidio
 - Felipe Neiva
