@@ -1,7 +1,6 @@
 .data
-	# variaveis na memoria com valores diferentes para podermos debugar
-	result_perfect_square: .word 1
-	result_not_perfect: .word 0
+	result_perfect_square: .word
+	result_not_perfect: .word
 
 .text
 	# pedir o input de a e salvar em t0:
@@ -28,7 +27,7 @@
 		addi $t2, $t2, 1
 		bne $t2, 10, proxiteracao
 		
-		# se chegar até aqui, é por que b = 0 (se a parte que seta b =1 tivesse sido executada, teria pulado para o label end)
+		# se chegar atÃ© aqui, Ã© por que b = 0 (se a parte que seta b =1 tivesse sido executada, teria pulado para o label end)
 		sw $t0, result_not_perfect
 	
 	end:
