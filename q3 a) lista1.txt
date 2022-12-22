@@ -1,0 +1,5 @@
+CISC é a sigla para "Complex Instruction Set Computer",  ou seja, executa intruções complexas. Essas instruções são normalmente longas e repletas de operações
+matemáticas distintas, não possuem um tamanho padrão, e exigem que o processador acesse a memória, fazendo serem usualmente necessários vários ciclos de relógio para
+executar uma só instrução.
+RISC é a silga para "Reduced Instruction Set Computer", ou seja, instruções reduzidas. A instrução maior é quebrada em várias instruções menores e mais simples,
+com um tamanho padrão e cada instrução pode ser executada em apenas um ciclo de relógio

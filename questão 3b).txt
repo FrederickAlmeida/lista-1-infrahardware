@@ -1,9 +1,0 @@
-O processador MIPS, desenvolvido em meados da década de 80, é um exemplo de arquitetura RISC ( "conjunto reduzido de instruções" ), 
-tendo como princípio a velocidade, portanto adotando as seguintes políticas a fim de atingir a máxima proficiência:
-
-- A simplificação era acarretada pela regularização das instruções, tamanho fixo, poucos formatos diferentes, e a utilização dos 6 primeiros bits pelo OPCODE.
-
-- Princípio "quanto menor mais rápido": quantidade de registradores limitados e reduzido número de modos de endereçamento, 
-mais uma vez enfatizando o limitado repertório de instruções.
-
-- "tornar rápido o caso comum".
