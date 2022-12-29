@@ -2,7 +2,6 @@
 	msg1: .asciiz "Digite um número: "
 	msg2: .asciiz "Digite outro número: "
  	msgMod: .asciiz "O valor de a mod b é "
- 	msgFim: .asciiz "Programa finalizado porque a é negativo!"
  	msgZero: .asciiz "Programa finalizado porque b é 0 e não possível fazer divisão por 0"
 .text  
 	
@@ -21,14 +20,6 @@
 		move $a1, $v0
 		
 		jal retornaMod
-		
-		move $t1, $v0
-		
-		la $a0, msgMod
-		jal imprimeMsg
-		
-		move $a0, $t1
-		jal imprimeInteiro
 		jal encerraPrograma
 		
 		
@@ -55,8 +46,12 @@
 	#função da condição de a ser negativo
 	recebe1:
 		li $v1, 1
-		la $a0, msgFim
+		move $t1, $a0
+		add $t2, $t1, $a1
+		la $a0, msgMod
 		jal imprimeMsg
+		move $a0, $t2
+		jal imprimeInteiro
 		jal encerraPrograma
 	#função da divisão por zero
 	falhaZero:
@@ -68,6 +63,7 @@
 	retornaMod:
 		blt $a0, $zero, recebe1
 		beq $a1, $zero, falhaZero
-		div $a0, $a1
-		mfhi $v0 
+		sub $t0, $a0, $a1
+		move $a0, $t0
+		jal retornaMod
 		jr $ra
