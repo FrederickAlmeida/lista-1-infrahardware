@@ -1,0 +1,24 @@
+A) A "arquitetura" refere-se aos atributos do sistema visíveis ao programador:
+- Conjunto de registradores.
+- "Formato" e "Repertório" de instruções.
+- Modo de endereçamento.
+- Tipos de dados.
+Por outro lado, "organização" refere-se às unidades operacionais que implementam a arquitetura:
+- Tecnologia de memória.
+- Interfaces.
+- Interconexões.
+- Implementação das instruções.
+
+B) Avaliando "registradores" e "memória", concluímos o seguinte:
+- Comparando velocidade --> registradores encontram-se em vantagem quando comparados a memória, devido a afinidade com a CPU.
+- Localização --> os registradores encontram-se dentro da CPU, enquanto a memória é externa à mesma.
+- Uso --> Um registrador armazena informação temporariamente e a redireciona ao local desejado pela CPU. Em contraste, a memória principal
+é responsável pelo armazenamento de "data" e programas que estão sendo utilizados pela CPU.
+- Tipos --> memória é principalmente dividida em 2 principais tipos, "SRAM" e "DRAM", enquanto existem um variado leque de registradores 
+capazes de diferentes funcionalidades, acumuladores, registradores de "data", registradores de instruções, dentre outros.
+
+
+C) A diferença se dá na posição onde se encontra o byte mais significativo, em um modelo "Big Endian",o Byte mais significativo tem menor 
+endereço de palavra, enquanto "Little Endian" o byte mais significativo possui o maior endereço. Em relação ao armazenamento na memória, em
+um estilo "Big Endian", por exemplo, o byte 0 se encontra com o maior endereço, enquanto o oposto acontecerá em relação ao "Little Endian",
+o maior byte guardará tal endereço de memória. 	
