@@ -1,9 +1,9 @@
-A) A "arquitetura" refere-se aos atributos do sistema visíveis ao programador:
+A) A "arquitetura" refere-se aos atributos do sistema visíveis ao programador, o que tem influência direta na lógica de programação (comportamento funcional do sistema), ou seja, o que o programador é capaz de "manipular", dentre eles:
 - Conjunto de registradores.
 - "Formato" e "Repertório" de instruções.
 - Modo de endereçamento.
 - Tipos de dados.
-Por outro lado, "organização" refere-se às unidades operacionais que implementam a arquitetura:
+Por outro lado, "organização" refere-se às unidades operacionais que implementam a arquitetura (as unidades operacionais e suas interconexões, relacionamento estrutural):
 - Tecnologia de memória.
 - Interfaces.
 - Interconexões.
