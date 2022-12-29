@@ -3,6 +3,7 @@
 	msg2: .asciiz "Digite outro número: "
  	msgMod: .asciiz "O valor de a mod b é "
  	msgFim: .asciiz "Programa finalizado porque a é negativo!"
+ 	msgZero: .asciiz "Programa finalizado porque b é 0 e não possível fazer divisão por 0"
 .text  
 	
 	.main:
@@ -57,9 +58,16 @@
 		la $a0, msgFim
 		jal imprimeMsg
 		jal encerraPrograma
+	#função da divisão por zero
+	falhaZero:
+		la $a0, msgZero
+		jal imprimeMsg
+		jal encerraPrograma
+		
 	#recebe a e b em $a0 e $a1, e retorna o mod em $v0
 	retornaMod:
 		blt $a0, $zero, recebe1
+		beq $a1, $zero, falhaZero
 		div $a0, $a1
 		mfhi $v0 
 		jr $ra
