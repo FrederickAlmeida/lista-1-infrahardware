@@ -18,7 +18,5 @@ B) Avaliando "registradores" e "memória", concluímos o seguinte:
 capazes de diferentes funcionalidades, acumuladores, registradores de "data", registradores de instruções, dentre outros.
 
 
-C) A diferença se dá na posição onde se encontra o byte mais significativo, em um modelo "Big Endian",o Byte mais significativo tem menor 
-endereço de palavra, enquanto "Little Endian" o byte mais significativo possui o maior endereço. Em relação ao armazenamento na memória, em
-um estilo "Big Endian", por exemplo, o byte 0 se encontra com o maior endereço, enquanto o oposto acontecerá em relação ao "Little Endian",
-o maior byte guardará tal endereço de memória. 	
+C) A diferença se dá na posição onde se encontra o byte mais significativo, em um modelo "Big Endian", o Byte mais significativo tem menor 
+endereço de palavra, enquanto no "Little Endian" o byte mais significativo possui o maior endereço. Em relação ao armazenamento na memória, considerando que os dados são guardados em palavras de 32 bits (4 bytes); Big Endian: no primeiro (menor) byte fica os 8 bits mais significativos do valor, enquanto que no 4º (maior) byte estará os 8 bits menos significativos, por exemplo, ao armazenar 0x12345678 no intervalo de 0-3, 0x12 ficaria no byte 0, 0x34 no byte 1, 0x56 no byte 2, 0x78 no byte 3, já no Little Endian, seria o contrário, 0x78 ficaria no byte 0, 0x56 no byte 1, 0x34 no byte 2 e 0x12 no byte 3.
