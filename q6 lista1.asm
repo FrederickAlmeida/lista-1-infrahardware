@@ -72,6 +72,7 @@
 	ambos_negativos: # se ambos forem negativos só é necessário inverter o sinal do resto
 		mult $t4, $s2
 		mflo $t4
+		j end
 	
 	erro:
 		la $a0, msg
