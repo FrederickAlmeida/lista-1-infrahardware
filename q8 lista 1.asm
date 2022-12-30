@@ -18,6 +18,7 @@
 		
 		move $a0, $t0
 		move $a1, $v0
+		move $a2, $a0
 		
 		jal retornaMod
 		jal encerraPrograma
@@ -44,8 +45,7 @@
 		li $v0, 10
 		syscall 
 	#função da condição de a ser negativo
-	recebe1:
-		li $v1, 1
+	printaMod:
 		move $t1, $a0
 		add $t2, $t1, $a1
 		la $a0, msgMod
@@ -58,11 +58,14 @@
 		la $a0, msgZero
 		jal imprimeMsg
 		jal encerraPrograma
-		
+	recebe1:
+		li $v1, 1
+		jal encerraPrograma	
 	#recebe a e b em $a0 e $a1, e retorna o mod em $v0
 	retornaMod:
-		blt $a0, $zero, recebe1
+		blt $a2, $zero, recebe1
 		beq $a1, $zero, falhaZero
+		blt $a0, $zero, printaMod
 		sub $t0, $a0, $a1
 		move $a0, $t0
 		jal retornaMod
