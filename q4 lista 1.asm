@@ -1,5 +1,5 @@
 .data
-	#definindo as variáveis
+	#definindo as variÃ¡veis
 	b: .word 2
 	res: .word 1
 	i: .word 0
@@ -11,11 +11,12 @@
 	lw $t2, i #carregando i
 	
 	FOR:
-		slt $t3, $t2, $t0 #t3 é o resultado de st2 < st0
+		slt $t3, $t2, $t0 #t3 Ã© o resultado de st2 < st0
 		beq $t3, $zero, EXIT # se o resultado de t3 for 0, assim 0=0, pule para EXIT
-		sll $t1, $t1, 1 #dê um shift left em 1 casa (multiplicar por 2)
+		sll $t1, $t1, 1 #dÃª um shift left em 1 casa (multiplicar por 2)
 		addi $t2, $t2, 1 #i++
 		j FOR #jump para voltar ao for
-	EXIT: #saída da função
+	EXIT: #saÃ­da da funÃ§Ã£o
+		sw $t1, res	#guardar o resultado na memoria
 
 	 
